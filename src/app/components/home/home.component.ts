@@ -11,6 +11,8 @@ import {
 } from '@angular/material/dialog';
 import { ProductsComponent } from '../products/products.component';
 import { HttpClientModule } from '@angular/common/http';
+import * as AOS from 'aos';
+import { NgxSpinnerService } from 'ngx-spinner';
 
 @Component({
   selector: 'app-home',
@@ -27,15 +29,16 @@ import { HttpClientModule } from '@angular/common/http';
 export class HomeComponent implements OnInit {
 
   constructor(
+    private ngxSpinnerService: NgxSpinnerService,
     public dialog:MatDialog
   ) { }
 
   public ngOnInit(): void {
-    
+    this.ngxSpinnerService.show();
   }
 
-  public ngAfterViewInit():void {
-
+  public ngAfterViewInit():void { 
+    AOS.init();
   }
 
   public openDialog(id:number):void {

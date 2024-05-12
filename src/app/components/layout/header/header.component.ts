@@ -31,10 +31,8 @@ export class HeaderComponent implements OnInit, AfterViewInit {
   }
 
   @HostListener("window:scroll", ['$event'])
-  onWindowScroll() {
+  public onWindowScroll():void {
     this.offsetScrollY = window.pageYOffset || this.document.documentElement.scrollTop || this.document.body.scrollTop || 0;
-    
-    console.log(this.offsetScrollY);
   }
 
   public openMenu():void {
