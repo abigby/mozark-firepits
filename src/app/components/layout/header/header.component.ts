@@ -11,7 +11,7 @@ import { CommonModule, DOCUMENT } from '@angular/common';
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })
-export class HeaderComponent implements OnInit, AfterViewInit {
+export class HeaderComponent {
   public menuValue:boolean = false;
   public menu_icon:string = 'bi bi-list';
   public offsetScrollY:number = 0;
@@ -20,15 +20,7 @@ export class HeaderComponent implements OnInit, AfterViewInit {
     private firepitsService:FirepitsService,
     @Inject(DOCUMENT) private document: Document,
     // @Inject(WINDOW) private window: Window
-  ) { 
-
-  }
-
-  public ngOnInit(): void { }
-
-  public ngAfterViewInit(): void {
-    // this.mobileMenu.style.backgroundColor = 'red';
-  }
+  ) { }
 
   @HostListener("window:scroll", ['$event'])
   public onWindowScroll():void {

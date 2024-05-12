@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { HeroComponent } from './hero/hero.component';
 import { FirepitsService } from '../../services/firepits.service';
@@ -26,7 +26,7 @@ import { NgxSpinnerService } from 'ngx-spinner';
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent implements OnInit, AfterViewInit {
 
   constructor(
     private ngxSpinnerService: NgxSpinnerService,
