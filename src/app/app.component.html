@@ -1,4 +1,7 @@
-
-<app-header class="sticky"></app-header>
-<router-outlet />
-<app-footer></app-footer>
+@defer () {
+    <app-header class="sticky"></app-header>
+        <router-outlet />
+    <app-footer></app-footer>
+} @loading (after 100ms; minimum 2s){
+    <app-loader></app-loader>
+}

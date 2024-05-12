@@ -27,12 +27,16 @@ import { HttpClientModule } from '@angular/common/http';
 export class HomeComponent implements OnInit {
 
   constructor(
-    private router:Router,
-    private firepitsService:FirepitsService,
     public dialog:MatDialog
   ) { }
 
-  public ngOnInit(): void { }
+  public ngOnInit(): void {
+    
+  }
+
+  public ngAfterViewInit():void {
+
+  }
 
   public openDialog(id:number):void {
     const detailsDialogRef = this.dialog.open(
