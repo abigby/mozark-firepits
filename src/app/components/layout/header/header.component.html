@@ -1,0 +1,38 @@
+<header [ngClass]="{'position-fixed-navigation':this.offsetScrollY > 400, 'position-relative-navigation': this.offsetScrollY < 400}">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-sm-4">
+                <div class="logo-block" (click)="returnHome()">
+                    <img 
+                        src="../../assets/images/logos/mozark-firepits-logo-badge.png" 
+                        class="logo" alt="Mozark Fire Pits logo">
+                        <div class="v-line"></div>
+                    <span class="logo-name anton-regular">
+                        MOZARK FIRE PITS
+                    </span>
+                </div>
+            </div>
+            <div class="col-md-8 col-sm-8">
+                <div class="menu-icon" (click)="openMenu()">
+                    <i class="{{menu_icon}}"></i>
+                </div>
+                <div #mobile_menu class="desktop_menu" [class.mobile_menu]="menuValue">
+                    <ul>
+                        <li>
+                            <a routerLink="/home" routerLinkActive="active">Home</a>
+                        </li>
+                        <li>
+                            <a (click)="scrollToTarget('shop')">Shop Fire Pits</a>
+                        </li>
+                        <li>
+                            <a (click)="scrollToTarget('about')">About</a>
+                        </li>
+                        <li>
+                            <a (click)="scrollToTarget('contact')">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>

@@ -1,0 +1,68 @@
+footer {
+
+    .logo-wrapper {
+        display: flex;
+        justify-content: space-around;
+
+        .logo-block {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+    
+            img.logo {
+                width: 40px;
+            }
+    
+            &:hover {
+              cursor: pointer;
+            }
+    
+            div.v-line {
+                width: 3px;
+                height: 58px;
+                margin: 1rem;
+                z-index: 999999999999;
+                background-color: red;
+            }
+            span.logo-name {
+                font-size: 3rem;
+            }
+        }
+
+    }
+
+    dl {
+        dt { }
+    
+        dd {
+            a {
+                text-decoration: none !important;
+                font-size: 1.8rem;
+                color: #333;
+    
+                i {
+    
+                }
+
+                &:hover {
+                    color: red;
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    footer {
+        dl {
+            text-align: center;
+            margin: 3rem 0 4rem;
+            
+            dd,
+            dt {
+                margin: 1rem 0;
+            }
+        }
+    }
+}

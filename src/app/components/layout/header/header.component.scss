@@ -1,0 +1,110 @@
+.active {
+  text-decoration: underline !important;
+}
+
+header {
+    padding: 10px;
+    background: #fff;
+    border-bottom: 1px solid rgb(235, 235, 235);
+
+    .logo-block {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+
+        img.logo {
+            width: 50px;
+        }
+
+        &:hover {
+          cursor: pointer;
+        }
+
+        div.v-line {
+            width: 3px;
+            height: 58px;
+            margin: 1rem;
+            z-index: 999999999999;
+            background-color: red;
+        }
+        span.logo-name {
+            font-size: 4rem;
+        }
+    }
+
+    .desktop_menu {
+        margin-top: 24px;
+
+        ul {
+            padding: 0;
+            margin: 0;
+            display: flex;
+
+            li {
+                list-style-type: none;
+                color: black;
+                display: inline-block;
+                font-size: 1.8rem;
+                margin-left: 26px;
+                cursor: pointer;
+
+                &:hover {
+                    font-size: 1.81rem;
+                    font-weight: bold;
+                    color: #000000;
+                    text-decoration: underline;
+                    transition: 0.3s ease-in-out;
+                }
+
+                a {
+                  text-decoration: none;
+                  color: inherit;
+                }
+            }
+        }
+    }
+
+    .menu-icon {
+        display: none;
+    }
+}
+  
+  
+  @media screen and (min-width: 128px) and (max-width: 900px) {
+    .desktop_menu {
+      position: fixed !important;
+      right: -280px;
+      transition: 0.4s ease-in-out;
+      top: 64px;
+      background: #fff;
+      width: 280px;
+      height: 100%;
+
+      ul {
+        flex-direction: column;
+      }
+    }
+    .desktop_menu ul li {
+      display: block;
+      text-align: left;
+      margin: 0;
+      padding: 10px 0 10px 26px;
+      border-bottom: 1px solid grey;
+    }
+    
+  }
+
+  /* On screens that are 600px or less */
+@media screen and (max-width: 600px) {
+  .menu-icon {
+    display: block !important;
+    color: #000;
+    font-size: 40px;
+    padding-top: 10px;
+  }
+
+  .mobile_menu {
+    right: 0;
+    transition: 0.4s ease-in-out;
+  }
+}

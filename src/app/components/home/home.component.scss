@@ -1,0 +1,244 @@
+section.featured-production {
+    div.decorated-fold-bar {
+        background-image: linear-gradient(to right, #feb65c, red);
+        padding: 6rem 0;
+        display: flex;
+        flex-direction: column;
+
+        h1 {
+            color: #fff;
+            text-transform: uppercase;
+            text-align: center;
+            font-size: 5rem;
+            line-height: 1;
+            font-family: var(--font-body-family);
+            font-weight: var(--font-heading-weight-bold);
+            margin-bottom: 0;
+        }
+
+        div.fold-items-wrapper {
+            align-self: center;
+            display: flex;
+            justify-content: center;
+
+            div.fold-inner-wrapper {
+                display: flex;
+                justify-content: space-around;
+                max-width: 70%;
+    
+                div.fold-items {
+                    margin-right: 5rem;
+                    display: inline-block;
+                    width: 250px;
+
+                    &:last-child {
+                        margin-right: 0 !important;
+                    }
+
+                    span.item {
+                        display: flex;
+                        flex-direction: column;
+    
+                        span.item-title {
+                            font-size: 2rem;
+                            color: #fff;
+                            margin-bottom: 1rem;
+                            text-align: center;
+                        }
+                        span.item-icon {
+                            color: #fff;
+                            text-align: center;
+                            font-size: 4rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    div.fold-bar {
+        height: 10rem;
+        display: flex;
+        align-items: flex-start;
+        margin-top: 2rem;
+        padding: 5rem;
+        flex-direction: column;
+        
+        div#fold-description {
+            font-size: 1.8rem;
+            line-height: 1.5;
+        }
+
+        h1.fold-title {
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 2.5rem;
+            margin: 0;
+            height: 4rem;
+            border-right: 1px solid #000;
+            padding-right: 1rem;
+            padding-top: 0.5rem;
+        }
+    }
+}
+
+section.products-section {
+    background-color: #f5f5f5;
+
+    div.product-wrapper {
+        background-color: var(--background-color) !important;
+        position: relative;
+        padding-top: 5rem;
+
+        div.product {
+            position: relative;
+
+            img.product-image {
+                display: block;
+                width: 100%;
+                max-width: 50rem;
+                height: auto;
+            }
+
+            div.product-details {
+                padding: 1rem 2rem 2rem;
+
+                h2.product-title {
+                    line-height: normal;
+                    font-size: 2.5rem;
+                    text-transform: uppercase;
+                    margin: 1rem 0;
+                }
+                h4.product-subtitle {
+                    color: #585858;
+                }
+                span.product-price {
+                    display: inline-block;
+                    font-weight: bold;
+                    margin-bottom: 1rem;
+                    font-size: 2.5rem;
+                }
+
+                dl {
+                    color: #585858;
+
+                    dt {
+                        color: #585858;
+                    }
+
+                    dd {
+                        color: #585858;
+                    }
+                }
+                button {
+                    font-size: var(--font-button-text-size);
+                    font-weight: var(--font-button-text-weight);
+                    padding: 0.7rem var(--padding-button-size);
+                    width: 100%;
+                    margin-top: 2rem;
+
+                    & + button {
+                        margin-top: 1rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+section.product-summary {
+    h1.summary-title {
+        color: #000;
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 5rem;
+        line-height: 1;
+        font-family: var(--font-body-family);
+        font-weight: var(--font-heading-weight-bold);
+        margin-bottom: 4rem;
+    }
+
+    div.summary-description {
+        text-align: left;
+        font-size: 2rem;
+        line-height: 3rem;
+        // font-family: var(--font-body-family);
+        font-weight: var(--font-body-weight);
+    }
+}
+
+section.product-staging-promo {
+    img {
+        display: block;
+        width: 100%;
+    }
+
+    div.image-half {
+        background-image: url('../../../assets/images/mozark-firepit-smores.webp');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    
+    div.description-half {
+        background-color: red;
+
+        h1.summary-title {
+            color: #fff;
+            text-transform: uppercase;
+            text-align: center;
+            font-size: 5rem;
+            line-height: 1;
+            font-family: var(--font-body-family);
+            font-weight: var(--font-heading-weight-bold);
+            margin-bottom: 4rem;
+        }
+        p.summary-description {
+            text-align: left;
+            font-size: 2rem;
+            line-height: 3rem;
+            color: #fff;
+            // font-family: var(--font-body-family);
+            font-weight: var(--font-body-weight);
+        }
+    }
+
+}
+
+/* On screens that are 600px or less */
+@media screen and (max-width: 600px) {
+    section.featured-production {
+        div.decorated-fold-bar {
+            padding: 6rem;
+
+            h1 {
+                font-size: 5.5rem;
+
+                &:first-child {
+                    margin-top: 6rem;
+                }
+            }
+
+            div.fold-items-wrapper {
+                div.fold-inner-wrapper {
+                    display: flex;
+                    justify-content: space-around;
+                    max-width: 70%;
+                    flex-direction: column !important;
+                    flex-wrap: wrap !important;
+
+                    div.fold-items {
+                        &:first-child {
+                            margin-top: 6rem;
+                        }
+                        width: 150px;
+                        margin-bottom: 4rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* On screens that are 768px or less */
+@media screen and (max-width: 768px) {
+
+}

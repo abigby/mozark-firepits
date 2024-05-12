@@ -1,0 +1,21 @@
+@if(firepit) {
+    <h2 mat-dialog-title>{{firepit[0].title}}</h2>
+    <mat-dialog-content>
+      <dl>
+        <!-- <dt>Price</dt>
+        <dd>{{firepit[0].price}}</dd> -->
+        <!-- <dt>Description</dt>
+        <dd>{{firepit[0].description}}</dd> -->
+        <dt>Additional Specifications</dt>
+        <dd>{{firepit[0].additional_specs}}</dd>
+        <dt>Color/Finish</dt>
+        <dd>{{firepit[0].color_finish}}</dd>
+        <dt>Care Recommendation</dt>
+        <dd>{{firepit[0].care_recommendation}}</dd>
+      </dl>
+    </mat-dialog-content>
+    <mat-dialog-actions align="end">
+        <button mat-button mat-dialog-close>Close</button>
+        <button mat-button [mat-dialog-close]="{navigate:true, url: firepit[0].external_site_url}" cdkFocusInitial>Buy</button>
+    </mat-dialog-actions>
+}
